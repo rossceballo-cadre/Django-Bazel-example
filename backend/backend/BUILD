@@ -17,3 +17,17 @@ py_library(
         requirement("sqlparse"),
     ],
 )
+# py_binary(
+#     name = "runtornado",
+#     main = "asgi.py",
+#     srcs = [
+#         "asgi.py",
+#         "settings.py",
+#     ],
+#     deps = [
+#         "//backend/backend:py_default_library",
+#         "//backend/todo:py_default_library",
+#         requirement("Django"),
+#         requirement("Tornado"),
+#     ]
+# )

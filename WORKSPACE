@@ -27,9 +27,9 @@ npm_translate_lock(
     verify_node_modules_ignored = "//:.bazelignore",
 )
 
-load("@npm//:repositories.bzl", "npm_repositories")
+#load("@npm//:repositories.bzl", "npm_repositories")
 
-npm_repositories()
+#npm_repositories()
 
 #------------------------------------------------------------------------------
 # Python
@@ -59,7 +59,7 @@ load("@rules_python//python:pip.bzl", "pip_parse")
 pip_parse(
     
     name = "my_deps",
-    requirements_lock = "//backend:requirements.txt",
+    requirements_lock = "//:requirements.txt",
     python_interpreter_target = interpreter,
 )
 load("@my_deps//:requirements.bzl", "install_deps")
